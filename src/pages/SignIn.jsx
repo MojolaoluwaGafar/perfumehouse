@@ -76,7 +76,7 @@ const SignIn = () => {
               style={{ width: "22px", height: "22px" }}
               src={google}
               alt=""
-            />{" "}
+            />
             Continue with Google
           </button>
           <p className="text-center mt-2">
