@@ -7,7 +7,7 @@ import google from "../assets/googleicon.png"
 const Register = () => {
   return (
     <div className="register">
-      <header style={{position: 'sticky'}} className="ps-5 py-3">
+      <header className="py-3">
         <nav className="container">
           <Link className="text-decoration-none" to="/">
             <span className="main-color-bg text-white rounded-circle p-2">
@@ -19,12 +19,12 @@ const Register = () => {
       </header>
       <div>
         <form
-          style={{ width: "640px"}}
-          className="bg-white mx-auto p-5 shadow-lg rounded-2"
+          style={{maxWidth: "600px"}}
+          className="bg-white mx-auto px-4 py-2 shadow-lg rounded-2"
         >
           <h1>Get Started</h1>
           <p>Let's get started by filling out the information below</p>
-          <div className="d-flex flex-row justify-content-between my-3">
+          <div className="d-flex flex-row gap-1 justify-content-between my-3">
             <div>
               <label className="form-label" htmlFor="firstname">
                 First Name
@@ -83,10 +83,9 @@ const Register = () => {
           >
             Register
           </button>
-          <img className="d-flex m-auto my-2" src={image} alt="" />
+          <img className="d-flex m-auto my-2 w-100" src={image} alt="" />
           <button style={{ height: "64px" }} className="border-0 w-100">
             <img
-              style={{ width: "22px", height: "22px" }}
               src={google}
               alt=""
             />

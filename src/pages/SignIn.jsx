@@ -21,7 +21,7 @@ const SignIn = () => {
 
   return (
     <div className="signin">
-      <header className="ps-5 py-3">
+      <header className="ps-2 py-3">
         <nav className='container'>
           <Link className="text-decoration-none" to="/">
             <span className="main-color-bg text-white rounded-circle p-2">
@@ -31,8 +31,8 @@ const SignIn = () => {
           </Link>
         </nav>
       </header>
-      <div style={{ width: "642px" }} className="container">
-        <form onSubmit={handleSubmit} className="bg-white mx-auto p-5 shadow-lg rounded-2">
+      <div className="container">
+        <form onSubmit={handleSubmit} className="bg-white mx-auto p-3 shadow-lg rounded-2">
           <h1>Welcome Back</h1>
           <p>Fill in your information to access your account</p>
           <label htmlFor="email">Email</label>
@@ -60,9 +60,9 @@ const SignIn = () => {
                 Remember Me
               </label>
             </div>
-            <Link className="text-danger" to="/register">
+            <a className="text-danger" href="##">
               Forgot password?
-            </Link>
+            </a>
           </div>
           <button type='submit'
             style={{ backgroundColor: "#8D34FF", height: "64px" }}
@@ -70,10 +70,9 @@ const SignIn = () => {
           >
             Sign In
           </button>
-          <img className="d-flex m-auto my-2" src={image} alt="" />
-          <button style={{ height: "64px" }} className="border-0 w-100 mt-2 ">
+          <img  className="d-flex m-auto my-2 w-100" src={image} alt="" />
+          <button style={{ height: "64px" }} className="border-0 w-100 mt-2 rounded-2 ">
             <img
-              style={{ width: "22px", height: "22px" }}
               src={google}
               alt=""
             />

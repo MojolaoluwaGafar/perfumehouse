@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import {perfumes} from "../data"
+import Cartitem from './Cartitem';
 import SinglePerfume from './SinglePerfume';
 
 function Cart ({id,title,image,rating,price,oldPrice,itemsLeft}){
@@ -8,48 +9,13 @@ function Cart ({id,title,image,rating,price,oldPrice,itemsLeft}){
  
   return (
     <div
-      style={{ border: "1px solid #D0D0D0", width: "400px" }}
-      className="py-4 mt-5 mt-lg-0 "
+      style={{ border: "1px solid #D0D0D0"}}
+      className=" py-4 px-1 mt-5 mt-lg-0 "
     >
       <h4 className="fw-bold">My Cart Preview</h4>
       <div className="d-flex flex-column pt-3" style={{ width: "300px" }}>
-        {perfumes.slice(0, 5).map((perfume) => {
-          return (
-            <div className="d-flex gap-3 py-4">
-              <div>
-                <img
-                  style={{ width: "95px", height: "110px" }}
-                  src={perfume.image}
-                  alt={perfume.title}
-                />
-              </div>
-              <div style={{ height: "98px", width: "250px" }}>
-                <p>{perfume.title}</p>
-                <div className="d-flex gap-1">
-                  <button
-                    onClick={() => setNum(num - 1)}
-                    style={{ backgroundColor: "#D2D2D2" }}
-                    className="main-color-bg text-white border-0 rounded-1 h-25"
-                  >
-                    -
-                  </button>
-                  <p>{num}</p>
-                  <button
-                    onClick={() => setNum(num + 1)}
-                    className="main-color-bg text-white border-0 rounded-1 h-25"
-                  >
-                    +
-                  </button>
-                </div>
-                <div className="d-flex gap-5">
-                  <p className="pt-3">N{perfume.price}</p>
-                  <button className="rounded-2 text-danger border-danger bg-transparent h-25 mt-2 w-50">
-                    Remove
-                  </button>
-                </div>
-              </div>
-            </div>
-          );
+        {perfumes.map((perfume) => {
+          return <Cartitem key={perfume.id} {...perfume} />;
         })}
       </div>
       <div className="d-flex flex-column pt-5">
