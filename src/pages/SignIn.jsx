@@ -22,7 +22,7 @@ const SignIn = () => {
   return (
     <div className="signin">
       <header className="ps-2 py-3">
-        <nav className='container'>
+        <nav className="container">
           <Link className="text-decoration-none" to="/">
             <span className="main-color-bg text-white rounded-circle p-2">
               PZ
@@ -32,22 +32,24 @@ const SignIn = () => {
         </nav>
       </header>
       <div className="container">
-        <form onSubmit={handleSubmit} className="bg-white mx-auto p-3 shadow-lg rounded-2">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white mx-auto p-3 shadow-lg rounded-2"
+        >
           <h1>Welcome Back</h1>
           <p>Fill in your information to access your account</p>
           <label htmlFor="email">Email</label>
           <input
-          value={email}
-          onChange={(e)=> setEmail(e.target.value)}
-
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             type="email"
             className="form-control my-2"
             placeholder="Enter your email"
           />
           <label htmlFor="password">Password</label>
           <input
-          value={password}
-          onChange={(e)=> setPassword(e.target.value)}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             type="password"
             className="form-control my-2"
             placeholder="Enter your password"
@@ -64,19 +66,20 @@ const SignIn = () => {
               Forgot password?
             </a>
           </div>
-          <button type='submit'
+          <button
+            type="submit"
             style={{ backgroundColor: "#8D34FF", height: "64px" }}
-            className="text-white mt-2 border-0 rounded-2 w-100"
+            className="text-white mt-2 fs-5 border-0 rounded-2 w-100"
           >
             Sign In
           </button>
-          <img  className="d-flex m-auto my-2 w-100" src={image} alt="" />
-          <button style={{ height: "64px" }} className="border-0 w-100 mt-2 rounded-2 ">
-            <img
-              src={google}
-              alt=""
-            />
-            Continue with Google
+          <img className="d-flex m-auto my-2 w-100" src={image} alt="" />
+          <button
+            style={{ height: "64px" }}
+            className="d-flex flex-row justify-content-center align-items-center border-0 w-100 rounded-2"
+          >
+            <img src={google} alt="" />
+            <p className="ms-1 pt-3 fs-5">continue with Google</p>
           </button>
           <p className="text-center mt-2">
             Dont have an account?

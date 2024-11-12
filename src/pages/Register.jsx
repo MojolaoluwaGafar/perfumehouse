@@ -19,12 +19,12 @@ const Register = () => {
       </header>
       <div>
         <form
-          style={{maxWidth: "600px"}}
+          style={{ maxWidth: "600px" }}
           className="bg-white mx-auto px-4 py-2 shadow-lg rounded-2"
         >
           <h1>Get Started</h1>
           <p>Let's get started by filling out the information below</p>
-          <div className="d-flex flex-row gap-1 justify-content-between my-3">
+          <div className="d-flex flex-column flex-lg-row gap-1 justify-content-between my-3">
             <div>
               <label className="form-label" htmlFor="firstname">
                 First Name
@@ -70,26 +70,29 @@ const Register = () => {
             placeholder="Confirm your Password"
             className="form-control"
           />
-          <div className='my-2'>
+          <div className="my-2">
             <input className="form-check-input" type="checkbox" />
             <label className="form-check-label ms-2" htmlFor="checkbox">
-              I agree to <a href="##">Terms of Service</a> and
-              <a href="##"> Privacy Policies</a>
+              I agree to{" "}
+              <a href="##">
+                <span>Terms of Service</span>
+              </a>{" "}
+              and
+              <a href="##">
+                <span> Privacy Policies</span>
+              </a>
             </label>
           </div>
           <button
             style={{ backgroundColor: "#8D34FF", height: "64px" }}
-            className="text-white mt-2 border-0 rounded-2 w-100"
+            className="text-white mt-2 fs-5 border-0 rounded-2 w-100"
           >
             Register
           </button>
-          <img className="d-flex m-auto my-2 w-100" src={image} alt="" />
-          <button style={{ height: "64px" }} className="border-0 w-100">
-            <img
-              src={google}
-              alt=""
-            />
-            Continue with Google
+          <img className="my-2 w-100" src={image} alt="" />
+          <button style={{ height: "64px" }} className="d-flex flex-row justify-content-center align-items-center border-0 w-100 rounded-2">
+            <img src={google} alt="" />
+            <p className='ms-1 pt-3 fs-5'>continue with Google</p>
           </button>
           <p className="text-center my-2">
             Already have an account?
